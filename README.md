@@ -11,3 +11,6 @@ The application does not support Internet Explorer.
 • Used CSS bootstrap for responsive web design.
 • Provided descriptive documentation.
 
+In case of "Could not find a part of the path … bin\roslyn\csc.exe" (bug related to NuGet package) - run this in the Package Manager Console:
+
+Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r
