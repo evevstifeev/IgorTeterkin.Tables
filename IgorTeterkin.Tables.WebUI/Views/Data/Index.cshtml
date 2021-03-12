@@ -8,11 +8,6 @@
     <link rel="stylesheet" href="~/Content/main.css">
 }
 
-@{
-    var DataController = new DataController();
-    //var jsonData = DataController.GetData().Data;
-    var remoteHtml = DataController.GetHtml().Result;
-}
 <div id="tables">
     <b class="tableTitle">Информация о договоре страхования:</b>
     <table id="contractInfo">
@@ -51,7 +46,7 @@
     </table>
     <br>
     <b class="tableTitle">Значимая информация:</b>
-    <table id="significantInfo">
+    <table id="valuableInfo">
         <tr>
             <th>Страховая сумма по смерти, руб.</th>
             <th>Общая страховая премия, руб.</th>
