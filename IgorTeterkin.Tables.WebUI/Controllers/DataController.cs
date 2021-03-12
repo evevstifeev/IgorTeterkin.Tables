@@ -30,28 +30,25 @@ namespace IgorTeterkin.Tables.WebUI.Controllers
         /// Reads the .json file and return the data
         /// </summary>
         /// <returns></returns>
-        [ChildActionOnly]
-        //[HttpGet]
+        [HttpGet]
         public JsonResult GetData()
         {
             var path = HostingEnvironment.MapPath("~/App_Data/test.json");
 
             string data = string.Empty;
-            dynamic DynamicData = data;
             try
             {
                 using (StreamReader r = new StreamReader(path))
                 {
                     data = r.ReadToEnd();
-                    DynamicData = JsonConvert.DeserializeObject(data);
-                    
                 }
             }
             catch (System.IO.FileNotFoundException)
             {
                 // Handle expeption here
             }
-            return Json(DynamicData, JsonRequestBehavior.AllowGet);
+
+            return Json(new { generalData = data, currencyRatio = GetHtml().Result }, JsonRequestBehavior.AllowGet);
         } 
 
         [ChildActionOnly]

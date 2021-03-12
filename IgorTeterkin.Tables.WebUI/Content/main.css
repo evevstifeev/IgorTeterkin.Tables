@@ -1,4 +1,5 @@
 #tables {
+    /* Bootstrap changes the font family */
     font-family: 'Times New Roman';
 }
 
@@ -21,7 +22,6 @@
     border-spacing: 0;
     table-layout: auto;
     width: 100%;
-    /* border: 1px solid black;*/
 }
 
 #naturalPersonMainDocument td:nth-child(2),
